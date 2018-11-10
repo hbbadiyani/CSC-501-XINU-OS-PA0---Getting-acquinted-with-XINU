@@ -1,0 +1,48 @@
+CSC 501
+PA1
+
+Answer 1 --
+
+1. EXPONENTIAL DISTRIBUTION SCHEDULER:
+
+Advantages:-
+1. It employs randomisation concept which has less complexity and light on the processor, hence all the processes have equal chance of getting scheduled.
+2. It solves the problem of starvation by randomisation.
+3. All the processes that have priority closer to the lamda ar emore likely to get scheduled, hence we have a little control over a range of priority values.
+
+Disadvantages:-
+1. The value for lamda should be chosen carefully for Exponential Distributor Scheduler to work well
+2. Chosing extreme values can result to unfair scheduling.
+
+
+2. LINUX-LIKE SCHEDULER:
+
+Advantages:-
+1. Processes are prioritized according to their priority and notrandomly as above, hence processes having higher priority are preferred over lower priority processes.
+2. Fairness among processes: say the I/O bound processe which have not used their counter value are also given a fair chance.
+3. It is close to multilevel scheduling, as aprocess with high value of priority will be preffered over the one with lower priority and the goodness value will be high that ensures it will be among top priority process in the next cycle of scheduling.
+
+Disadantages:-
+1. The algorithm is heavy on the processor as much more number of calculations are involved compared to the above mentioed scheduling policy and hence it takes more time in scheduling.
+
+
+3. ROUND ROBIN SCHEDULER:
+
+Advantages:-
+1.* It's a faster scheduling algorithm as there are no calculations involved and just priorities have to be compared.
+
+* If there are many high priority processes, all get equal time.
+
+* If compared with non-preemptive schedulers, it has better average response time.
+
+Disadvantages -
+* Processes with low priority might have to wait for a long time before they are allocated a processor.
+
+* Performance of this type of scheduling algorithm highly depends on the value of time interval chosen. If this value is too low then cost of context switch might increase and result in slower execution.
+
+
+Answer 2 --
+
+EXP DIST SCHD - Null process is scheduled only if ready queue is empty.
+LINUX-LIKE SCHD - As the goodness value is 0 for Null processes hence Null process shall never be scheduled
+ROUND-ROBIN - Null process is not scheduled.
